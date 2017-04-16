@@ -1,0 +1,10 @@
+
+<!-- pages/chooseArea/chooseArea.wxml -->
+<view class="body">
+  <view class="location-text">当前位置</view>
+  <view class="location-content" bindtap="bindLocationTap">{{region}}</view>
+  <view class="location-text">全部地区</view>
+  <view wx:for="{{provinceList}}" wx:key="province">
+    <view bindtap="bindProvinceTap" id="{{item.id}}" class="location-content bb" data-province="{{item.name}}">{{item.name}}</view>
+  </view>
+</view>

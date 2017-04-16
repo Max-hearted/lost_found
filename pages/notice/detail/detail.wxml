@@ -1,0 +1,51 @@
+
+<!--pages/notice/detail/detail.wxml-->
+<view class="body">
+  <view class="title">{{notice.title}}</view>
+  <view class="section">
+    <text class="text_left">发 布 者:</text>
+    <text class="text_right">{{notice.publisher}}</text>
+  </view>
+  <view class="section">
+    <text class="text_left">物品种类：</text>
+    <text class="text_right">{{notice.classify}}</text>
+  </view>
+  <view class="section">
+    <text class="text_left">失物地点：</text>
+    <text class="text_right">{{notice.lostArea}}</text>
+  </view>
+  <view class="section">
+    <text class="text_left">详细地址：</text>
+    <text class="text_right">{{notice.lostAddress}}</text>
+  </view>
+  <view class="section">
+    <text class="text_left">时\t\t间：</text>
+    <text class="text_right">{{notice.lostDate}}</text>
+  </view>
+  <view class="section">
+    <text class="text_left">图 片:</text>
+    <view class="img" bindtap="previewImage" data-url="{{photoUrl}}">
+      <image src="{{photoUrl}}"></image>
+    </view>
+  </view>
+  <view class="section" style="flex-direction:column;">
+    <text class="text_left">详细描述</text>
+    <text>{{notice.detail}}</text>
+  </view>
+  <view class="section">
+    <text class="text_left">联 系 人:</text>
+    <text class="text_right">{{notice.contact}}</text>
+  </view>
+  <view class="section">
+    <text class="text_left">联系电话:</text>
+    <text class="text_right blue" bindtap="onCall" data-phoneNum="{{notice.phoneNum}}">{{notice.phoneNum}}</text>
+  </view>
+  <view class="warn">
+    <text>温馨提示：接到陌生人来电或短信时，凡涉及到钱财交易，请广大网友提高警惕，谨防上当受骗！</text>
+  </view>
+
+  <view class="section">
+    <button size="mini" type="default" bindtap="onClickCollection">收藏</button>
+    <!--<button size="mini" type="default" bindtap="onClickShare">二维码分享</button>-->
+  </view>
+</view>

@@ -1,0 +1,50 @@
+
+<!-- pages/notice/notice.wxml -->
+<import src="../temp/noticeList.wxml" />
+<view class="body">
+
+  <!-- 头部导航 -->
+  <view class="top-tab">
+    <view class="top-tab-item {{currentTopItem==idx ? 'active' : ''}}" wx:for="{{topTabItems}}" wx:for-index="idx" data-idx="{{idx}}" wx:key="*this" bindtap="switchTab">{{item}}</view>
+  </view>
+
+  <!-- 正文 -->
+  <swiper class="swiper" current="{{currentTopItem}}" bindchange="bindChange" duration="300">
+
+    <!-- 寻物启事列表 -->
+    <swiper-item>
+      <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshData">
+        <block wx:for="{{notices_good}}" wx:key="good" wx:for-item="item">
+          <template is="noticeList" data="{{item: item}}" />
+        </block>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 寻宠启事列表 -->
+    <swiper-item>
+      <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshData">
+        <block wx:for="{{notices_pet}}" wx:key="pet"  wx:for-item="item">
+          <template is="noticeList" data="{{item: item}}" />
+        </block>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 寻人启事列表 -->
+    <swiper-item>
+      <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshData">
+        <block wx:for="{{notices_person}}" wx:key="person"  wx:for-item="item">
+          <template is="noticeList" data="{{item: item}}" />
+        </block>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 认领启事列表 -->
+    <swiper-item>
+      <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshData">
+        <block wx:for="{{notices_claim}}" wx:key="claim" wx:for-item="item">
+          <template is="noticeList" data="{{item: item}}" />
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

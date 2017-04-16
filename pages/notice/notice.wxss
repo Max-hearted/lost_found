@@ -1,0 +1,65 @@
+/* pages/notice/notice.wxss */
+@import '../temp/noticeList.wxss';
+.weui-search-bar{
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  width: 100%;
+}
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+/*top tab头部布局*/
+
+.top-tab {
+  height: 36px;
+  width: 750rpx;
+  border-top: 1rpx solid #dddcdc;
+  color: #7b7b7b;
+  font-size: 15px;
+  background-color: #f7f7f7;
+  z-index: 9999;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  position: fixed;
+  top: 0;
+
+}
+
+.top-tab .top-tab-item {
+  flex-grow: 1;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.top-tab-item.active {
+  border-bottom: 2px solid red;
+  color: red;
+}
+
+.swiper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  margin: 0;
+  border: 0;
+  margin-top: 37px;
+  background-color: #fff;
+}
+
+.scrollView {
+  height: 100%;
+}

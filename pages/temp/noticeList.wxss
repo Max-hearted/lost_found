@@ -1,0 +1,58 @@
+.noticeItem {
+  width: 100%;
+  height: 200rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 10rpx solid #eaeaea;
+}
+
+.img {
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.img image {
+  width: 180rpx;
+  height: 180rpx;
+  padding: 10rpx;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  width: 100%;
+}
+
+.title {
+  font-size: 18px;
+  color: #576b95;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.classify {
+  color: blueviolet;
+  margin-right: 20rpx;
+}
+.lostDate{
+  color: #888;
+}
+.detail {
+  color: #888;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.address {
+  color: #888;
+  overflow: hidden;
+  white-space: nowrap;
+}

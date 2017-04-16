@@ -1,0 +1,7 @@
+<!-- pages/chooseArea/city/city.wxml -->
+<view class="body">
+  <view class="block"></view>
+  <view wx:for="{{cityList}}" wx:key="city">
+    <view class="location-content bb" id="{{item.id}}" bindtap="bindCityTap" data-city="{{item.name}}">{{item.name}}</view>
+  </view>
+</view>

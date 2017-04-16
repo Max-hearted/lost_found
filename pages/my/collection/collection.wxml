@@ -1,0 +1,9 @@
+<!--pages/my/collection/collection.wxml-->
+<import src="../../temp/noticeList.wxml" />
+<view class="body">
+  <scroll-view class="scrollView" scroll-y="true">
+    <block wx:for="{{collections}}" wx:key="good" wx:for-item="item">
+      <template is="noticeList" data="{{item: item.notice}}" />
+    </block>
+  </scroll-view>
+</view>

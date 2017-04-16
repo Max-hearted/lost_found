@@ -1,0 +1,22 @@
+
+<!--启事信息中的列表模板-->
+<template name="noticeList">
+  <view class="noticeItem" bindtap="onClickItem" id="{{item.objectId}}" data-notice="{{item}}">
+
+    <!--图片-->
+    <view class="img">
+      <image src="{{(item.photoUrl=='http://www.shiwurenling.com/images/defaultpic.gif'||item.photoUrl=='')?'/images/logo.png':item.photoUrl}}"></image>
+    </view>
+
+    <!--文字信息-->
+    <view class="text">
+      <view class="title">{{item.title}}</view>
+      <view class="row">
+        <text class="classify">{{item.classify}}</text>
+        <text class="lostDate">{{item.releaseDate}}</text>
+      </view>
+      <view class="address">地区:{{item.lostArea}}</view>
+      <view class="detail">详情:{{item.detail}}</view>
+    </view>
+  </view>
+</template>

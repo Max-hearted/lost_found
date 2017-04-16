@@ -1,0 +1,85 @@
+
+<!--pages/release/release.wxml-->
+<view class="body">
+  <scroll-view scroll-y="true">
+
+    <!-- 表单 -->
+    <form bindreset="bindReset" bindsubmit="bindSubmit">
+      <view class="block"></view>
+      <input placeholder="请输入标题" name="title" style="border-bottom:1px solid #eee" />
+
+      <!-- 选择失物类别 -->
+      <view class="section">
+        <view class="leftArea">启事类型</view>
+        <picker class="rightArea" bindchange="bindNoticeChange" value="{{index}}" range="{{noticeTypes}}">
+          <view class="picker">{{noticeType}}</view>
+        </picker>
+      </view>
+      <view class="line"></view>
+      <view class="section" bindtap="bindChooseGoodsTap">
+        <view class="leftArea">失物类别</view>
+        <view class="rightArea">{{good}}</view>
+      </view>
+      <view class="block"></view>
+
+      <!--发布者-->
+      <view class="section">
+        <view class="leftArea">发布人</view>
+        <view class="rightArea" bindtap="bindPublisherTap">
+          <text>{{publisher}}</text>
+        </view>
+      </view>
+      <view class="line"></view>
+
+      <!-- 选择丢失日期 -->
+      <view class="section">
+        <view class="leftArea">丢失日期</view>
+        <view class="rightArea">
+          <picker mode="date" value="{{lostDate}}" bindchange="bindDateChange" end="{{endDate}}">
+            <view class="picker" name="datePicker">{{lostDate}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="block"></view>
+
+      <!-- 选择地区 -->
+      <view class="section" bindtap="bindChooseAreaTap">
+        <view class="leftArea">选择地区</view>
+        <view class="rightArea">{{region}}</view>
+      </view>
+      <view class="line"></view>
+      <view class="section">具体地点</view>
+      <input placeholder="如火车站、公交车等" name="lostAddress" />
+      <view class="block"></view>
+
+      <!-- 物品详细描述 -->
+      <view class="section">失物详情</view>
+      <view class="line"></view>
+      <textarea placeholder="请输入详细信息" name="detail" />
+      <view class="block"></view>
+
+      <!-- 联系人 -->
+      <view class="section">
+        <view>联系人</view>
+        <input class="rightInput" placeholder="请输入联系人" name="contact" />
+      </view>
+      <view class="line"></view>
+
+      <!-- 联系电话 -->
+      <view class="section">
+        <view>联系电话</view>
+        <input placeholder-class="placeholder" class="rightInput" placeholder="请输入联系电话" name="phoneNum" />
+      </view>
+      <view class="block"></view>
+
+      <!-- 添加图片 -->
+      <view class="section">添加图片</view>
+      <view class="imageArea">
+        <image src="{{photoUrl}}" bindtap="bindImageTap"></image>
+      </view>
+
+      <!-- 提交按钮 -->
+      <button form-type="submit" type="primary" class="btn" loading="{{loading}}">发布启事</button>
+    </form>
+  </scroll-view>
+</view>

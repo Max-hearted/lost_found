@@ -1,0 +1,51 @@
+/* pages/notice/detail/detail.wxss */
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  background: white;
+  padding: 10rpx;
+  color: #576b95;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  padding: 10rpx 20rpx;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.text_left {
+  font-size: 16px;
+  color: #888;
+}
+
+.text_right {
+  font-size: 16px;
+  color: #000;
+}
+
+.img {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.img image {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.blue {
+  color: #576b95;
+}
+
+.warn {
+  font-size: 16px;
+  background-color: white;
+  color: red;
+  padding: 20rpx;
+}

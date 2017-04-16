@@ -1,0 +1,2 @@
+/* pages/my/collection/collection.wxss */
+@import '../../temp/noticeList.wxss';

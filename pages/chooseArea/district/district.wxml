@@ -1,0 +1,7 @@
+<!-- pages/chooseArea/district/district.wxml -->
+<view class="body">
+  <view class="block"></view>
+  <view wx:for="{{areaList}}" wx:key="area" >
+    <view class="location-content bb" bindtap="bindAreaTap" data-district="{{item.fullname}}">{{item.fullname}}</view>
+  </view>
+</view>

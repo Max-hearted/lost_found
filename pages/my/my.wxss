@@ -1,0 +1,42 @@
+/* pages/my/my.wxss */
+
+.userInfo {
+  height: 160rpx;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40rpx;
+}
+
+.avatar {
+  padding: 10rpx 20rpx;
+}
+
+.avatar image {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+}
+
+.nickname {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.gender {
+  font-size: 20px;
+  color: #888;
+}
+
+.icon {
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}

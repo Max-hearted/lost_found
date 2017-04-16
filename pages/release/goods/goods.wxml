@@ -1,0 +1,7 @@
+<!--pages/release/lostGood/goods/goods.wxml-->
+<view class="body">
+  <view class="block"></view>
+  <view wx:for="{{classify}}" wx:key="good" wx:for-index="idx">
+    <view class="location-content bb" id="{{idx}}" bindtap="bindGoodTap">{{item}}</view>
+  </view>
+</view>
